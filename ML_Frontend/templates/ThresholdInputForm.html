@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+   body {
+    padding: 20px;
+    background-image: url('/static/bg2.png'); /* Use the /static/ prefix */
+    background-repeat: no-repeat;
+    /* Adjust to cover or contain based on your preference */
+    background-position: top right ; /* Align the background image to the left and top */
+    color: #fff; /* Light text color for better contrast */
+}
+
+
+
+        .form-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .form-group label {
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        #thresholdInput {
+            width: 150px;
+        }
+
+
+		h1 {
+    color: #000; /* Black color for the heading */
+    margin-left: 0; /* Set left margin to 0 */
+}
+
+        button {
+            background-color: #007bff;
+            border-color: #007bff;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+    </style>
+    <title>Machine Outage Alert Dashboard</title>
+</head>
+<body>
+
+<div class="form-container">
+    <h1 class="mt-4">Enter Threshold:</h1>
+    
+    <form action="/dashboard" method="get">
+        <div class="form-group">
+            <input type="number" class="form-control" name="threshold" id="thresholdInput" placeholder="Enter threshold">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
